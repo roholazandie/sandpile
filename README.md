@@ -15,16 +15,16 @@ At the same time we record avalanches by another grid of the same size. Everytim
 
 This is how the grid will look like in the long run (in the beginign there is some time to reach the bigger avalanches)
 
-![alt text](data/sandpile.mp4)
+![Demo](data/sandpile.gif)
 
 
 Also we can record the avalanches through time:
 
-![alt text](data/avalanches.mp4)
+![alt text](data/avalanches.gif)
 
 If we only record the avalanches that are bigger than the previous ones we get this:
 
-![alt text](data/bigger_avalanches.mp4)
+![alt text](data/bigger_avalanches.gif)
 
 
 We also can confirm the power law distributoin:
