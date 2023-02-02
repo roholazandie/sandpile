@@ -6,10 +6,7 @@ This repository is an implementation of Sandpile Model by [Per Bak](https://www.
 To see the results you can run [`sandpile.m`](sandpile.m) file in MATLAB.
 
 # How it works?
-The sandpile is modeled as a `NxN` grid names `state` and randomly initialized by 1, 2, 3 grains of sand. Every time we select a random position in the grid
-add one more grain of sand to it and check if it exceeds the threshold of 3 sands per cell, if so that cell will be emptied (0 sands) and it will be distributed across its neighbors
-from up, down, left and right. On the edges of the grid we ignore the distribution (falling off the table that has the grid). Now we have 4 new places (as children), that
-needs to be checked again if they exceed the threshold and do the same for them until there is no more redistribution.
+The sandpile is modeled as an `NxN` grid named state, which is randomly initialized with one, two, or three grains of sand. At each iteration, a random position within the grid is selected, and one grain of sand is added to it. If the number of grains in this cell exceeds the threshold of three, the cell is emptied (set to zero), and its contents are distributed to its neighboring cells in the up, down, left, and right directions. Note that distributions on the edges of the grid are ignored, as grains are assumed to fall off the table. The process of checking for exceeding the threshold and redistributing continues for each of the newly affected cells (children), until there is no further redistribution.
 
 At the same time we record avalanches by another grid of the same size. Everytime there is a distribution in `(x,y)` position we add 1 to the avalanche matrix.
 
@@ -32,5 +29,7 @@ We also can confirm the power law distributoin:
 ![alt text](data/power_law.jpg)
 
 
+# Video output
+To record the video output you have to uncomment the associated parts in the [`sandpile.m`](sandpile.m) file
 
 
